@@ -1,0 +1,248 @@
+
+#navabar-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    background-color: rgb(244, 245, 245);
+    z-index: 0;
+}
+
+#navabar-1 #links a{
+    text-decoration: none;
+    color: #111111; 
+    font-size: 14px;
+    padding-right: 2px;
+    cursor: pointer;
+}
+
+#navabar-1 #links a:hover{
+    color: #7c7b7b;
+}
+/* Style for nav-2 */
+.menu ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    transition: 0.6s;
+    background: #272626;
+}
+.menu ul li a:hover::after{
+    width: 100%;
+}
+
+/* container *  /
+/* navbar-3 */
+#navbar-3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    width: 100%;
+    padding-top: 8px;
+}
+
+nav{
+    color: #000;
+    z-index: 99;
+    position: relative;
+}
+#navabar-1{
+    padding: 1.5px 2em;
+    margin: 0 auto;
+}
+nav a, header a{
+    color: #000;
+    text-decoration: none;
+}
+
+nav .container{
+    max-width: 1150px;
+    padding: 1em 2em;
+    margin: 0 auto;
+}
+
+nav .container > div{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+}
+
+nav .menu, nav form, .footer, .footer .watch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+nav ul a{
+    font-size: 0.8em;
+}
+
+nav form{
+    margin-right: 2em;
+}
+
+nav form input{
+    background: transparent;
+    color: #000;
+    width: 12em;
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+}
+
+nav form input::placeholder{
+    color: #000;
+}
+
+.logo{
+   width: 2em; 
+   display: inline-block;
+}
+
+.nav-btn{
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
+}
+
+.nav-btn:hover{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+nav .container .menu-btn{
+    display: none;
+}
+
+header{
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+ header::before{
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    right: -40em;
+    width: 100%;
+    height: 120%;
+    z-index: 0;
+}
+
+header::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(0,0,0,0.2);
+    font-size: 17em;
+    font-weight: 700;
+    z-index: 0;
+}
+
+.menu ul li a:hover{
+    color:#000;
+}
+.menu ul li::after{
+    color: #000;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #272626;
+    display: block;
+    margin: auto;
+    transition: 0.6s;
+}
+
+
+
+@media screen and (max-width: 1000px){
+    nav .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    nav .container > div{
+        grid-template-columns: 1fr;
+    }
+    nav .menu{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+    nav ul li{
+        display: block;
+        margin: 0.5em 0;
+    }
+    nav ul li:nth-child(1){
+        margin-top: 1.5em;
+    }
+    nav .container .menu-btn{
+        display: inline-block;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+    nav .container .nav-toggle{
+        height: 16em;
+    }
+}
+
+@media screen and (max-width: 1210px){
+    nav{
+        margin-bottom: 2em;
+    }
+    .body{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    header::before{
+        display: none;
+    }
+    header{
+        height: initial;
+    }
+    /* .body > div:nth-child(2){
+        justify-content: center;
+        margin: 3em 0;
+    } */
+    /* .body img{
+        transform: none;
+    }
+    .body p{
+        margin: 2em auto 3em auto;
+    } */
+}
+
+@media screen and (max-width: 800px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 650px){
+    header{
+        height: initial;
+    }
+}
